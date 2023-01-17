@@ -13,9 +13,9 @@ app.use(express.json());
 //     res.send("hello world");
 // });
 
-//mongoose.connect("mongodb+srv://admin-bikramjit:bik%40Skill%231@cluster0.qrapc.mongodb.net/Mynotebook",{useNewUrlParser:true});
+
 mongoose.connect(process.env.MONGOMY,{useNewUrlParser:true});
-// mongoose.connect("mongodb+srv://bikram:bikramMongo@cluster1.2bodz6h.mongodb.net/mynote",{useNewUrlParser:true});
+
 //available Routes
 app.use("/api/auth",require("./routes/auth"));
 app.use("/api/note",require("./routes/notes"));
